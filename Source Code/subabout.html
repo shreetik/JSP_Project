@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>My Website</title>
+		<script language="javascript">
+			function hilight(id1){
+				cid=document.getElementById(id1);
+				cid.style.backgroundColor="#98FF98";
+			}
+			function normal(id1){
+				cid=document.getElementById(id1);
+				cid.style.backgroundColor="#4E9258";
+			}
+		</script>
+	</head>
+	<body>
+	<blockquote>
+		<table>
+			<tr height="30" bgcolor="#4E9258">
+				<td width="250" style="border-radius:5px"id="id1" onmouseover="hilight('id1')" onmouseout="normal('id1')"><a href="vet_about.html" target="_blank" style="text-decoration:none"> <font color="black">About Our Univarsity</font></a></td>			
+			</tr>
+		</table>
+	</body>
+</html>

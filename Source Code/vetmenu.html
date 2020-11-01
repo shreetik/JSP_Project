@@ -1,0 +1,113 @@
+<html>
+	<head>
+		<title>My Website</title>
+		<script language="javascript">
+		var imgs=new Array();
+		imgs[0]="img101.jpg";
+		imgs[1]="img102.jpg";
+		imgs[2]="img103.jpg";
+		imgs[3]="img104.jpg";
+		imgs[4]="img105.jpeg";
+		
+		var i=0;
+		function slideshow()
+		{
+			i=i+1;
+			if(i>4)
+			i=0;
+			document.f1.imgname.src=imgs[i];
+			setTimeout("slideshow()",2000);
+		}
+		
+		function showTimeDate(){
+				cdt=new Date();
+				h=cdt.getHours();
+				m=cdt.getMinutes();
+				s=cdt.getSeconds();
+				tm=h+":"+m+":"+s;
+				document.f1.txtTime.value=tm;
+				setTimeout("showTimeDate()",1000);
+				cdt=new Date();
+				d=cdt.getDate();
+				m=cdt.getMonth()+1;
+				y=cdt.getYear()+1900;
+				dt=d+"-"+m+"-"+y;
+				document.f1.txtDate.value=dt;
+				}
+			function hilight(id1){
+				cid=document.getElementById(id1);
+				cid.style.backgroundColor="#EE9A4D";
+				}
+			function normal(id1){
+				cid=document.getElementById(id1);
+				cid.style.backgroundColor="maroon";
+				}
+			function showsubabout(about){
+				cid=document.getElementById(about);
+				cid.src="subabout.html";
+				}
+			function showsubsearch(search){
+				cid=document.getElementById(search);
+				cid.src="subsearc.html";
+				}
+			function showsubreach(reach){
+				cid=document.getElementById(reach);
+				cid.src="subreach.html";
+				}
+			function showsubmast(mast){
+				cid=document.getElementById(mast);
+				cid.src="submast.html";
+				}
+			function showsubmgmt(mgmt){
+				cid=document.getElementById(mgmt);
+				cid.src="submgmt.html";
+				}
+			function showsubsrpt(srpt){
+				cid=document.getElementById(srpt);
+				cid.src="subsrpt.html";
+				}
+			function showsubdrpt(drpt){
+				cid=document.getElementById(drpt);
+				cid.src="subdrpt.html";
+				}
+			function showsubadd(add){
+				cid=document.getElementById(add);
+				cid.src="subadd.html";
+				}
+		</script>
+	</head>
+	<body onload="showTimeDate(),slideshow()" background="bkimg2.jpg">
+	<form name="f1">
+	<table width="100%" height="60" bgcolor1="#4E9258" bgcolor="navy">
+				<tr><td><input type="text" name="txtDate" size="5" style="background-color:navy;color:white;border:0px" disabled></td>
+					<td align="center"><font color="#EDDA74" face="Lucida Calligraphy" size="5">Varsity e-Zone Tracker</font></td>
+					<td align="right"><input type="text" name="txtTime" size="4" style="background-color:navy;color:white;border:0px" disabled></td></tr>
+			</table>
+		
+		<table width="100%">
+			<tr height="30" bgcolor1="#EE9A4D" bgcolor1="#98FF98" bgcolor="maroon">
+				<td align="center" style="border-radius:5px;cursor:pointer"id="about" onclick="showsubabout('subcontaioner')" onmouseover="hilight('about')" onmouseout="normal('about')"><font color="white" face="Book Antiqua" size="3">About</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="search" onclick="showsubsearch('subcontaioner')" onmouseover="hilight('search')" onmouseout="normal('search')"><font color="white" face="Book Antiqua" size="3">Search</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="reach" onclick="showsubreach('subcontaioner')" onmouseover="hilight('reach')" onmouseout="normal('reach')"><font color="white" face="Book Antiqua" size="3">Reach Us</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="mast" onclick="showsubmast('subcontaioner')" onmouseover="hilight('mast')" onmouseout="normal('mast')"><font color="white" face="Book Antiqua" size="3">Master</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="mgmt" onclick="showsubmgmt('subcontaioner')" onmouseover="hilight('mgmt')" onmouseout="normal('mgmt')"><font color="white" face="Book Antiqua" size="3">Management</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="srpt" onclick="showsubsrpt('subcontaioner')" onmouseover="hilight('srpt')" onmouseout="normal('srpt')"><font color="white" face="Book Antiqua" size="3">Summary Report</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="drpt" onclick="showsubdrpt('subcontaioner')" onmouseover="hilight('drpt')" onmouseout="normal('drpt')"><font color="white" face="Book Antiqua" size="3">Detailed Report</font></td>
+				<td align="center" style="border-radius:5px;cursor:pointer"id="add" onclick="showsubadd('subcontaioner')" onmouseover="hilight('add')" onmouseout="normal('add')"><font color="white" face="Book Antiqua" size="3">Additional</font></td>
+			</tr>
+			</table>
+			<table width="100%">
+			<tr height="400">
+				<td width="20%" background="bkimg2.jpg">
+				<iframe id="subcontaioner"  width="340" height="450"></iframe></td>
+				<td width="80%">
+				<img name="imgname" width="100%" height="450"></td>
+			</tr>
+		</table>
+		<br><table width="100%" height="60" bgcolor1="#4E9258" bgcolor="navy">
+	
+				<tr><td align="center"><marquee behavior="alternate"><font color="#EDDA74" >Designed & Developed By : Shreetik & Roma</font></marquee></td></tr>
+			</table>
+	</form>		
+	</body>
+</html>

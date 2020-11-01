@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<title>My Website</title>
+		<script language="javascript">
+			function hilight(id1){
+				cid=document.getElementById(id1);
+				cid.style.backgroundColor="#98FF98";
+			}
+			function normal(id1){
+				cid=document.getElementById(id1);
+				cid.style.backgroundColor="#4E9258";
+			}
+		</script>
+	</head>
+	<body>
+	<blockquote>
+		<table>
+			<tr height="30" bgcolor="#4E9258">
+				<td width="250" style="border-radius:5px"id="id1" onmouseover="hilight('id1')" onmouseout="normal('id1')"><a href="vet_cngloginc.jsp" target="_blank" style="text-decoration:none"> <font color="black">Change Login</font></a></td>			
+			</tr>
+			<tr height="30" bgcolor="#4E9258">
+				<td style="border-radius:5px"id="id2" onmouseover="hilight('id2')" onmouseout="normal('id2')"><a href="vet_sysreq.html" target="_blank" style="text-decoration:none"> <font color="black">System Requirement</font></a></td>			
+			</tr>
+		</table>
+	</body>
+</html>

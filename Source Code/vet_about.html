@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>Projet Title</title>
+	</head>
+	<script language="javascript">
+		function showTimeDate(){
+				cdt=new Date();
+				h=cdt.getHours();
+				m=cdt.getMinutes();
+				s=cdt.getSeconds();
+				tm=h+":"+m+":"+s;
+				document.f1.txtTime.value=tm;
+				setTimeout("showTimeDate()",1000);
+				cdt=new Date();
+				d=cdt.getDate();
+				m=cdt.getMonth()+1;
+				y=cdt.getYear()+1900;
+				dt=d+"-"+m+"-"+y;
+				document.f1.txtDate.value=dt;
+				}
+		function gohome(){
+				window.close();
+				}
+	</script>
+	<body onload="showTimeDate()" background="bkimg2.jpg">
+	<center>
+		
+		<form name="f1">
+		<table width="100%" height="60" bgcolor="#4E9258">
+				<tr><td><input type="text" name="txtDate" size="5" disabled></td>
+					<td align="center"><font color="#EDDA74" face="" size="5">Varsity e-Zone Tracker</font></font></td>
+					<td align="right"><input type="text" name="txtTime" size="4" disabled></td></tr>
+			</table>
+			<br><br><br>
+		<table width="800" border="0"  align="center" style="border-radius:30px 0px 30px 0px" background="vet.jpg">
+		<tr>
+			<td>
+			<table width="100%" style="border-radius:30px 0px 30px 0px" bgcolor="#4E9258" height="10">
+				<tr><td align="center">
+					<font color="#EDDA74" size="4" face="Cambria Math"><b>&nbsp;&nbsp;&nbsp;A b o u t</b></font>
+				</td></tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+		<td style="border-radius:15px">
+	
+		<br>
+		<table width="500" border="0" align="center">
+			<tr>
+				<td><font color="Greenish Blue" face="Algerian" size="4"></font></td>
+			</tr>
+			<tr>
+				<td>Odisha University of Engg. & Technology (OUET) democrates the higher education by taking it to the finger tips of the learners. This university provides high quality education such as Management, Information Techanology, Electronics, Computer Sciences, Electricals and other Programmes to all those who seek it. </td>
+			</tr>
+			
+		</table>
+			<center>
+			<br><br>
+			</center>		
+			</td>
+			</tr>
+			</table>
+			<br><br>
+			<a href="index.jsp"><img src="hm.JPG" height="30" width="40" align="right" onclick="gohome()"></img></a>
+			<table width="100%" height="60" bgcolor="#4E9258">
+	
+				<tr><td align="center"><marquee behavior="alternate"><font color="#EDDA74" face="Engravers MT">Designed & Developed By Shreetik Sahani & Roma Priyadarshini</font></marquee></td></tr>
+			</table>
+			</center>		
+			</body>
+		</html>
